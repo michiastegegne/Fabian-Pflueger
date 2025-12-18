@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="de">
-<head>
+<head<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+><meta charset="UTF-8">
   <meta charset="UTF-8" />
-  <title>Fabian – IT & Hardware Portfolio</title>
+  <title>Fabian ÔÇô IT & Hardware Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -14,13 +15,13 @@
       --bg-card: rgba(15, 23, 42, 0.6); /* Transparente Karten */
       --bg-card-hover: rgba(30, 41, 59, 0.8);
       
-      --text-main: #f1f5f9;     /* Helles Weiß-Grau */
-      --text-muted: #94a3b8;    /* Gedämpftes Grau */
+      --text-main: #f1f5f9;     /* Helles Wei├ƒ-Grau */
+      --text-muted: #94a3b8;    /* Ged├ñmpftes Grau */
       
-      /* Farbverläufe für den "Pro"-Look */
+      /* Farbverl├ñufe f├╝r den "Pro"-Look */
       --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); /* Blau zu Lila */
       --gradient-text: linear-gradient(to right, #60a5fa, #c084fc, #2dd4bf); /* Multigradient */
-      --accent-cyan: #2dd4bf;   /* Türkis für Highlights */
+      --accent-cyan: #2dd4bf;   /* T├╝rkis f├╝r Highlights */
       --accent-blue: #3b82f6;
       
       --border: rgba(18, 163, 184, 0.1);
@@ -36,7 +37,7 @@
 
     body {
       min-height: 100vh;
-      font-family: "Inter", sans-serif; /* Fließtext */
+      font-family: "Inter", sans-serif; /* Flie├ƒtext */
       background-color: var(--bg-dark);
       color: var(--text-main);
       /* Hintergund-Effekt (Aurora) */
@@ -46,7 +47,7 @@
       overflow-x: hidden;
     }
 
-    /* ÜBERSCHRIFTEN FONT (Outfit wirkt technischer) */
+    /* ├£BERSCHRIFTEN FONT (Outfit wirkt technischer) */
     h1, h2, h3, .nav-logo { font-family: "Outfit", sans-serif; }
 
     /* ===== NAVBAR ===== */
@@ -239,7 +240,7 @@
     .card-title { font-size: 1.3rem; margin-bottom: 0.8rem; color: #fff; }
     .card-text { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
 
-    /* Spezielle Listen (für PC Specs) */
+    /* Spezielle Listen (f├╝r PC Specs) */
     .spec-badge {
       display: inline-block; padding: 0.25rem 0.8rem;
       border-radius: 50px; background: rgba(255,255,255,0.07);
@@ -252,7 +253,7 @@
       padding-left: 1rem; position: relative;
     }
     .spec-list li::before {
-      content: "•"; color: var(--accent-blue); position: absolute; left: 0;
+      content: "ÔÇó"; color: var(--accent-blue); position: absolute; left: 0;
     }
     .spec-list strong { color: #f8fafc; }
 
@@ -310,11 +311,11 @@
     <div class="nav">
       <div class="nav-logo" onclick="showPage('start')">
         <div class="nav-logo-pill">F</div>
-        <span>Fabian • Tech Portfolio</span>
+        <span>Fabian ÔÇó Tech Portfolio</span>
       </div>
       <nav class="nav-links">
         <a data-page="start" class="active">Start</a>
-        <a data-page="about">Über mich</a>
+        <a data-page="about">├£ber mich</a>
         <a data-page="skills">Skills</a>
         <a data-page="pc">PC-Konfiguration</a>
         <a data-page="faq">FAQ</a>
@@ -333,66 +334,63 @@
           </h1>
           <p class="hero-text">
             Auf dieser Seite sammle ich mein Wissen rund um Computer. 
-            Während ich mich in der <strong>Web-Entwicklung und im Coden gerade neu einarbeite</strong>, 
+            W├ñhrend ich mich in der <strong>Web-Entwicklung und im Coden gerade neu einarbeite</strong>, 
             kenne ich mich mit <strong>PC-Hardware und Technik bereits bestens aus</strong>.
             Hier zeige ich meinen Lernfortschritt und mein Setup.
           </p>
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a class="btn btn-primary" data-page-link="pc">🔧 Meine PC-Konfiguration</a>
-            <a class="btn btn-ghost" data-page-link="about">👤 Über mich</a>
+            <a class="btn btn-primary" data-page-link="pc">­ƒöº Meine PC-Konfiguration</a>
+            <a class="btn btn-ghost" data-page-link="about">­ƒæñ ├£ber mich</a>
           </div>
         </div>
 
         <div class="image-frame">
-          <div class="image-placeholder">
-            📸 Platzhalter für dein Setup-Bild<br><br>
-            <small><code>&lt;img src="bild.jpg" ...&gt;</code></small>
-          </div>
+          <img src="images/3.jpg" alt="Mein Setup" style="width: 100%; display: block; border-radius: 16px;">
         </div>
       </div>
 
       <h2 class="section-heading">Was diese Seite zeigt</h2>
       <div class="grid">
         <div class="card" onclick="showPage('start')" style="cursor: pointer;">
-          <div class="card-meta">01 • Einstieg</div>
-          <h3 class="card-title">Schneller Überblick</h3>
-          <p class="card-text">Die Startseite fasst kurz zusammen, wer ich bin und womit ich mich aktuell beschäftige.</p>
+          <div class="card-meta">01 ÔÇó Einstieg</div>
+          <h3 class="card-title">Schneller ├£berblick</h3>
+          <p class="card-text">Die Startseite fasst kurz zusammen, wer ich bin und womit ich mich aktuell besch├ñftige.</p>
         </div>
         <div class="card" onclick="showPage('pc')" style="cursor: pointer;">
-          <div class="card-meta">02 • Technik</div>
+          <div class="card-meta">02 ÔÇó Technik</div>
           <h3 class="card-title">Hardware transparent</h3>
-          <p class="card-text">Detaillierte Einsicht in meinen Lian Li Build mit i7 und RTX 4070 Ti und warum ich diese Teile gewählt habe.</p>
+          <p class="card-text">Detaillierte Einsicht in meinen Lian Li Build mit i7 und RTX 4070 Ti und warum ich diese Teile gew├ñhlt habe.</p>
         </div>
         <div class="card" onclick="showPage('skills')" style="cursor: pointer;">
-          <div class="card-meta">03 • Entwicklung</div>
-          <h3 class="card-title">Schritt für Schritt</h3>
-          <p class="card-text">Unter „Skills“ dokumentiere ich, was ich schon sicher beherrsche und wo ich noch lerne (wie HTML/CSS).</p>
+          <div class="card-meta">03 ÔÇó Entwicklung</div>
+          <h3 class="card-title">Schritt f├╝r Schritt</h3>
+          <p class="card-text">Unter ÔÇ×SkillsÔÇ£ dokumentiere ich, was ich schon sicher beherrsche und wo ich noch lerne (wie HTML/CSS).</p>
         </div>
       </div>
     </section>
 
     <section id="page-about" class="page">
-      <h1 class="page-title hero-title">Über mich</h1>
-      <p class="section-subtext">Ein kurzer Einblick in meine Interessen und Kontaktmöglichkeiten.</p>
+      <h1 class="page-title hero-title">├£ber mich</h1>
+      <p class="section-subtext">Ein kurzer Einblick in meine Interessen und Kontaktm├Âglichkeiten.</p>
 
       <div class="grid">
         <div class="card">
           <h3 class="card-title">Kurzprofil</h3>
           <p class="card-text">
-            Ich beschäftige mich gern mit Computern, Hardware und digitaler Technik.
-            In meiner Freizeit informiere ich mich über neue Komponenten, vergleiche Konfigurationen und probiere verschiedene Programme aus.
-            Mit dieser Seite halte ich fest, was ich bereits kann, und zeige, in welche Richtung ich mich beruflich entwickeln möchte.
+            Ich besch├ñftige mich gern mit Computern, Hardware und digitaler Technik.
+            In meiner Freizeit informiere ich mich ├╝ber neue Komponenten, vergleiche Konfigurationen und probiere verschiedene Programme aus.
+            Mit dieser Seite halte ich fest, was ich bereits kann, und zeige, in welche Richtung ich mich beruflich entwickeln m├Âchte.
           </p>
         </div>
         <div class="image-frame">
-          <div class="image-placeholder">📸 Portrait Platzhalter</div>
+          <img src="images/3.jpg" alt="Mein Setup" style="width: 100%; display: block; border-radius: 16px;">
         </div>
       </div>
 
       <h2 class="section-heading" style="margin-top:3rem;">Kontakt</h2>
       <div class="card" style="margin-top: 1rem; display: inline-block;">
         <h3 class="card-title">Direkter Kontakt</h3>
-        <p class="card-text">Schreib mir einfach eine E-Mail, das Formular entfaellt:</p>
+        <p class="card-text">Schreib mir einfach eine E-Mail, das Formular entfällt:</p>
         <a class="btn btn-primary" href="mailto:info@fabianpflueger.ch">info@fabianpflueger.ch</a>
       </div>
     </section>
@@ -411,7 +409,7 @@
         <div class="card">
           <div class="card-meta">Office</div>
           <h3 class="card-title">Word, PowerPoint, Excel</h3>
-          <p class="card-text">Sauberes Layout, klare Strukturen und Tabellenkalkulation für schulische Arbeiten.</p>
+          <p class="card-text">Sauberes Layout, klare Strukturen und Tabellenkalkulation f├╝r schulische Arbeiten.</p>
         </div>
         <div class="card">
           <div class="card-meta">Learning</div>
@@ -438,7 +436,7 @@
         <div class="card">
           <div class="card-meta">Troubleshooting</div>
           <h3 class="card-title">Fehlersuche</h3>
-          <p class="card-text">Analyse von Temperaturen und Treibern, um PC-Probleme selbstständig zu lösen.</p>
+          <p class="card-text">Analyse von Temperaturen und Treibern, um PC-Probleme selbstst├ñndig zu l├Âsen.</p>
         </div>
       </div>
     </section>
@@ -447,33 +445,33 @@
       <h1 class="page-title hero-title">Meine PC-Konfiguration</h1>
       <p class="section-subtext">
         Diese Zusammenstellung basiert auf der Konfigurationsnummer <strong>2619750</strong>
-        und ist auf flüssiges Gaming und vielseitige Nutzung ausgelegt.
+        und ist auf fl├╝ssiges Gaming und vielseitige Nutzung ausgelegt.
       </p>
 
       <div class="hero" style="margin-bottom: 3rem;">
         <div class="image-frame">
-          <div class="image-placeholder">📸 PC Foto Platzhalter</div>
+          <img src="images/3.jpg" alt="Mein Setup" style="width: 100%; display: block; border-radius: 16px;">
         </div>
         <div>
           <div class="hero-tag">Gaming & Alltag</div>
           <h2 style="font-size: 2rem; color: #fff; margin-bottom: 1rem;">Lian Li LANCOOL II MESH RGB mit Intel i7-14700KF & RTX 4070 Ti</h2>
           <p class="card-text">
             Der Rechner kombiniert einen aktuellen Intel-Prozessor, schnellen DDR5-Speicher,
-            eine leistungsfähige Grafikkarte und eine große NVMe-SSD. Damit eignet er sich
-            für Spiele, Medienbearbeitung und allgemeine Anwendungen.
+            eine leistungsf├ñhige Grafikkarte und eine gro├ƒe NVMe-SSD. Damit eignet er sich
+            f├╝r Spiele, Medienbearbeitung und allgemeine Anwendungen.
           </p>
         </div>
       </div>
 
       <div class="card" style="margin-bottom: 3rem;">
-        <h3 class="card-title">Gesamtübersicht</h3>
+        <h3 class="card-title">Gesamt├╝bersicht</h3>
         <p class="card-text" style="columns: 2; column-gap: 3rem;">
           <strong>Betriebssystem:</strong> Windows 11 Home 64 Bit<br>
-          <strong>Gehäuse:</strong> Lian Li LANCOOL II MESH RGB<br>
+          <strong>Geh├ñuse:</strong> Lian Li LANCOOL II MESH RGB<br>
           <strong>CPU:</strong> Intel Core i7-14700KF, bis 5.60 GHz<br>
-          <strong>Kühlung:</strong> Endorfy Navis F360 ARGB<br>
+          <strong>K├╝hlung:</strong> Endorfy Navis F360 ARGB<br>
           <strong>Mainboard:</strong> MSI PRO Z790-P WIFI DDR5<br>
-          <strong>RAM:</strong> 32 GB (2×16 GB) DDR5-6000 Kingston Fury Beast RGB<br>
+          <strong>RAM:</strong> 32 GB (2├ù16 GB) DDR5-6000 Kingston Fury Beast RGB<br>
           <strong>SSD:</strong> 2 TB Kingston Fury Renegade M.2 PCIe 4.0<br>
           <strong>GPU:</strong> NVIDIA GeForce RTX 4070 Ti (12 GB)<br>
           <strong>Netzteil:</strong> 850 W Gigabyte GP-UD850GM 80+ Gold<br>
@@ -490,25 +488,25 @@
           <p class="card-text">Der Prozessor bietet eine Kombination aus leistungsstarken und effizienten Kernen und erreicht im Turbo bis zu 5.60 GHz.</p>
           <ul class="spec-list">
             <li><strong>Aufgabe:</strong> Steuert die Berechnungen des Systems.</li>
-            <li><strong>Stärken:</strong> Hohe Mehrkernleistung & starke Einzelkernleistung für Spiele.</li>
+            <li><strong>St├ñrken:</strong> Hohe Mehrkernleistung & starke Einzelkernleistung f├╝r Spiele.</li>
           </ul>
         </div>
         <div class="card">
-          <div class="spec-badge">Kühlung</div>
+          <div class="spec-badge">K├╝hlung</div>
           <h3 class="card-title">Endorfy Navis F360 ARGB</h3>
-          <p class="card-text">Eine 360-Millimeter-Wasserkühlung mit beleuchteten Lüftern.</p>
+          <p class="card-text">Eine 360-Millimeter-Wasserk├╝hlung mit beleuchteten L├╝ftern.</p>
           <ul class="spec-list">
-            <li><strong>Aufgabe:</strong> Hält die CPU kühl.</li>
-            <li><strong>Vorteil:</strong> Große Kühlfläche, leiser als kompakte Lösungen.</li>
+            <li><strong>Aufgabe:</strong> H├ñlt die CPU k├╝hl.</li>
+            <li><strong>Vorteil:</strong> Gro├ƒe K├╝hlfl├ñche, leiser als kompakte L├Âsungen.</li>
           </ul>
         </div>
         <div class="card">
           <div class="spec-badge">Mainboard</div>
           <h3 class="card-title">MSI PRO Z790-P WIFI DDR5</h3>
-          <p class="card-text">Ein ATX-Board mit Unterstützung für DDR5-Speicher und integriertem WLAN.</p>
+          <p class="card-text">Ein ATX-Board mit Unterst├╝tzung f├╝r DDR5-Speicher und integriertem WLAN.</p>
           <ul class="spec-list">
             <li><strong>Aufgabe:</strong> Verbindet alle Komponenten.</li>
-            <li><strong>Ausstattung:</strong> Moderne Schnittstellen für schnelle Laufwerke.</li>
+            <li><strong>Ausstattung:</strong> Moderne Schnittstellen f├╝r schnelle Laufwerke.</li>
           </ul>
         </div>
         <div class="card">
@@ -516,7 +514,7 @@
           <h3 class="card-title">32 GB DDR5-6000 Kingston Fury</h3>
           <p class="card-text">Zwei 16-GB-Module mit aktuellem DDR5-Standard und 6000 MHz Takt.</p>
           <ul class="spec-list">
-            <li><strong>Aufgabe:</strong> Hält Daten für den Moment bereit.</li>
+            <li><strong>Aufgabe:</strong> H├ñlt Daten f├╝r den Moment bereit.</li>
             <li><strong>Nutzen:</strong> Entspanntes Multitasking und Reserven.</li>
           </ul>
         </div>
@@ -544,68 +542,68 @@
           <p class="card-text">Ein vollmodulares Netzteil mit 850 W Leistung und 80+ Gold Effizienz.</p>
           <ul class="spec-list">
             <li><strong>Aufgabe:</strong> Stabile Stromversorgung.</li>
-            <li><strong>Vorteil:</strong> Nur benötigte Kabel werden genutzt (Modular).</li>
+            <li><strong>Vorteil:</strong> Nur ben├Âtigte Kabel werden genutzt (Modular).</li>
           </ul>
         </div>
         <div class="card">
-          <div class="spec-badge">Gehäuse</div>
+          <div class="spec-badge">Geh├ñuse</div>
           <h3 class="card-title">Lian Li LANCOOL II MESH RGB</h3>
-          <p class="card-text">Ein Gehäuse mit Glas-Seitenteil und luftdurchlässiger Front.</p>
+          <p class="card-text">Ein Geh├ñuse mit Glas-Seitenteil und luftdurchl├ñssiger Front.</p>
           <ul class="spec-list">
             <li><strong>Aufgabe:</strong> Schutz und Airflow.</li>
-            <li><strong>Eindruck:</strong> Modern und übersichtlich dank RGB & Glas.</li>
+            <li><strong>Eindruck:</strong> Modern und ├╝bersichtlich dank RGB & Glas.</li>
           </ul>
         </div>
       </div>
     </section>
 
     <section id="page-faq" class="page">
-      <h1 class="page-title hero-title">FAQ – Häufige Fragen</h1>
-      <p class="section-subtext">Einige typische Fragen, die zu dieser Konfiguration oder allgemein zu Hardware auftauchen könnten.</p>
+      <h1 class="page-title hero-title">FAQ ÔÇô H├ñufige Fragen</h1>
+      <p class="section-subtext">Einige typische Fragen, die zu dieser Konfiguration oder allgemein zu Hardware auftauchen k├Ânnten.</p>
 
       <div style="max-width: 800px;">
         <div class="faq-item">
-          <div class="faq-question">Warum hast du genau diese CPU gewählt? <span>▼</span></div>
+          <div class="faq-question">Warum hast du genau diese CPU gew├ñhlt? <span>Ôû╝</span></div>
           <div class="faq-answer">
             Die CPU kombiniert viele Kerne mit hohem Takt und bietet damit eine
             gute Mischung aus Mehrkernleistung und starker Einzelkernperformance.
-            Das ist sowohl für Spiele als auch für andere Anwendungen sinnvoll.
+            Das ist sowohl f├╝r Spiele als auch f├╝r andere Anwendungen sinnvoll.
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question">Reicht die RTX 4070 Ti für aktuelle Spiele? <span>▼</span></div>
+          <div class="faq-question">Reicht die RTX 4070 Ti f├╝r aktuelle Spiele? <span>Ôû╝</span></div>
           <div class="faq-answer">
-            Für gängige Auflösungen wie 1080p und 1440p ist die Karte sehr gut
-            geeignet. Mit passenden Einstellungen sind auch höhere Auflösungen möglich,
+            F├╝r g├ñngige Aufl├Âsungen wie 1080p und 1440p ist die Karte sehr gut
+            geeignet. Mit passenden Einstellungen sind auch h├Âhere Aufl├Âsungen m├Âglich,
             besonders wenn Funktionen wie DLSS genutzt werden.
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question">Weshalb sind 32 GB Arbeitsspeicher verbaut? <span>▼</span></div>
+          <div class="faq-question">Weshalb sind 32 GB Arbeitsspeicher verbaut? <span>Ôû╝</span></div>
           <div class="faq-answer">
-            32 GB sorgen dafür, dass genügend Reserve für mehrere Programme
+            32 GB sorgen daf├╝r, dass gen├╝gend Reserve f├╝r mehrere Programme
             parallel, viele Browser-Tabs und kommende Spiele vorhanden ist. So
-            bleibt das System länger flexibel nutzbar.
+            bleibt das System l├ñnger flexibel nutzbar.
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question">Warum setzt du auf eine große NVMe-SSD? <span>▼</span></div>
+          <div class="faq-question">Warum setzt du auf eine gro├ƒe NVMe-SSD? <span>Ôû╝</span></div>
           <div class="faq-answer">
             Eine schnelle NVMe-SSD macht den Alltag deutlich angenehmer: kurze
             Startzeiten, schnelle Installationen und kaum Wartezeiten beim Laden
-            von Spielen oder Projekten. Mit 2 TB ist genügend Platz
-            vorhanden, ohne direkt erweitern zu müssen.
+            von Spielen oder Projekten. Mit 2 TB ist gen├╝gend Platz
+            vorhanden, ohne direkt erweitern zu m├╝ssen.
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question">Wird die Grafikkarte direkt eingebaut geliefert? <span>▼</span></div>
+          <div class="faq-question">Wird die Grafikkarte direkt eingebaut geliefert? <span>Ôû╝</span></div>
           <div class="faq-answer">
-            Aus Transportsicherheitsgründen wird die Grafikkarte häufig separat verpackt.
-            So wird das Mainboard im Gehäuse geschont. Nach dem Aufbau wird die
+            Aus Transportsicherheitsgr├╝nden wird die Grafikkarte h├ñufig separat verpackt.
+            So wird das Mainboard im Geh├ñuse geschont. Nach dem Aufbau wird die
             Karte eingesetzt und mit den passenden Stromkabeln verbunden.
           </div>
         </div>
@@ -613,7 +611,7 @@
     </section>
 
     <footer>
-      ©️ <span id="year"></span> Fabian – IT & Hardware Portfolio
+      ┬®´©Å <span id="year"></span> Fabian ÔÇô IT & Hardware Portfolio
     </footer>
   </main>
 
@@ -640,12 +638,12 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    // Klick-Events für Navigation
+    // Klick-Events f├╝r Navigation
     navLinks.forEach(link => {
       link.addEventListener('click', () => showPage(link.dataset.page));
     });
 
-    // Klick-Events für Buttons innerhalb der Seiten
+    // Klick-Events f├╝r Buttons innerhalb der Seiten
     document.querySelectorAll('[data-page-link]').forEach(btn => {
       btn.addEventListener('click', () => showPage(btn.dataset.pageLink));
     });
@@ -654,7 +652,7 @@
     document.querySelectorAll('.faq-item').forEach(item => {
       item.addEventListener('click', () => {
         const isOpen = item.classList.contains('open');
-        // Erstmal alle schließen (optional, wenn man nur eins offen haben will)
+        // Erstmal alle schlie├ƒen (optional, wenn man nur eins offen haben will)
         // document.querySelectorAll('.faq-item').forEach(i => {
         //   i.classList.remove('open');
         //   i.querySelector('.faq-answer').style.display = 'none';
