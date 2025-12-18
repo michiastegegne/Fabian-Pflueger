@@ -1,7 +1,9 @@
 ﻿<!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Fabian – IT & Hardware Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,22 +16,22 @@
       --bg-dark: #020617;       /* Fast schwarzes Dunkelblau */
       --bg-card: rgba(15, 23, 42, 0.6); /* Transparente Karten */
       --bg-card-hover: rgba(30, 41, 59, 0.8);
-      
+
       --text-main: #f1f5f9;     /* Helles Weiß-Grau */
       --text-muted: #94a3b8;    /* Gedämpftes Grau */
-      
+
       /* Farbverläufe für den "Pro"-Look */
       --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); /* Blau zu Lila */
       --gradient-text: linear-gradient(to right, #60a5fa, #c084fc, #2dd4bf); /* Multigradient */
       --accent-cyan: #2dd4bf;   /* Türkis für Highlights */
       --accent-blue: #3b82f6;
-      
+
       --border: rgba(18, 163, 184, 0.1);
       --border-glow: rgba(59, 130, 246, 0.5);
-      
+
       --radius: 16px;
       --shadow-glow: 0 0 40px rgba(59, 130, 246, 0.15);
-      
+
       --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
@@ -40,8 +42,8 @@
       font-family: "Inter", sans-serif; /* Fließtext */
       background-color: var(--bg-dark);
       color: var(--text-main);
-      /* Hintergund-Effekt (Aurora) */
-      background-image: 
+      /* Hintergrund-Effekt (Aurora) */
+      background-image:
         radial-gradient(circle at top left, rgba(59, 130, 246, 0.15), transparent 40%),
         radial-gradient(circle at bottom right, rgba(139, 92, 246, 0.15), transparent 40%);
       overflow-x: hidden;
@@ -100,6 +102,7 @@
       font-weight: 500;
       transition: var(--transition);
       position: relative;
+      cursor: pointer;
     }
     .nav-links a:hover, .nav-links a.active { color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.3); }
     .nav-links a.active::after {
@@ -146,7 +149,7 @@
       font-weight: 700;
       margin-bottom: 1.5rem;
     }
-    
+
     .text-gradient {
       background: var(--gradient-text);
       -webkit-background-clip: text;
@@ -175,7 +178,7 @@
       box-shadow: 0 4px 25px rgba(59, 130, 246, 0.4);
     }
     .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(59, 130, 246, 0.6); }
-    
+
     .btn-ghost {
       background: rgba(255,255,255,0.05); color: #fff;
       border: 1px solid rgba(255,255,255,0.1);
@@ -189,13 +192,6 @@
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 24px;
       backdrop-filter: blur(10px);
-    }
-    .image-placeholder {
-      background: #0f172a; border-radius: 16px;
-      height: 320px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; text-align: center;
-      color: var(--text-muted); padding: 1rem;
-      border: 1px dashed var(--border);
     }
 
     /* ===== SEKTIONEN & KARTEN ===== */
@@ -216,10 +212,9 @@
       transition: var(--transition);
       position: relative;
       overflow: hidden;
-      /* Glas-Effekt */
       backdrop-filter: blur(10px);
     }
-    
+
     .card::before {
       content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 4px;
       background: var(--gradient-primary); opacity: 0; transition: opacity 0.3s;
@@ -241,12 +236,6 @@
     .card-text { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
 
     /* Spezielle Listen (für PC Specs) */
-    .spec-badge {
-      display: inline-block; padding: 0.25rem 0.8rem;
-      border-radius: 50px; background: rgba(255,255,255,0.07);
-      font-size: 0.75rem; text-transform: uppercase; color: #e2e8f0;
-      margin-bottom: 0.5rem; border: 1px solid rgba(255,255,255,0.1);
-    }
     .spec-list { list-style: none; margin-top: 0.8rem; }
     .spec-list li {
       margin-bottom: 0.5rem; font-size: 0.9rem; color: var(--text-muted);
@@ -255,40 +244,6 @@
     .spec-list li::before {
       content: "•"; color: var(--accent-blue); position: absolute; left: 0;
     }
-    .spec-list strong { color: #f8fafc; }
-
-    /* ===== FAQ ===== */
-    .faq-item {
-      background: var(--bg-card); border: 1px solid var(--border);
-      margin-bottom: 1rem; border-radius: 12px;
-      transition: var(--transition); overflow: hidden;
-    }
-    .faq-item:hover { border-color: var(--accent-blue); }
-    
-    .faq-question {
-      padding: 1.2rem; cursor: pointer; display: flex; justify-content: space-between;
-      align-items: center; font-weight: 600; color: #fff;
-    }
-    .faq-question span:last-child { color: var(--accent-cyan); font-size: 1.2rem; transition: 0.3s; }
-    .faq-answer {
-      padding: 0 1.2rem 1.2rem 1.2rem; display: none; color: var(--text-muted); line-height: 1.6;
-    }
-    .faq-item.open .faq-question { background: rgba(59, 130, 246, 0.1); }
-    .faq-item.open .faq-question span:last-child { transform: rotate(180deg); }
-
-    /* ===== KONTAKT ===== */
-    .form-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 2rem; margin-top: 2rem; }
-    .form-input, .form-textarea {
-      width: 100%; padding: 0.9rem; margin-bottom: 1rem;
-      border-radius: 10px; border: 1px solid var(--border);
-      background: rgba(15, 23, 42, 0.8); color: #fff;
-      font-family: inherit; transition: var(--transition);
-    }
-    .form-input:focus, .form-textarea:focus {
-      outline: none; border-color: var(--accent-blue);
-      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
-    }
-    .form-label { display: block; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; }
 
     /* Footer */
     footer {
@@ -300,8 +255,7 @@
     @media (max-width: 850px) {
       .hero { grid-template-columns: 1fr; text-align: center; }
       .hero-text { border-left: none; padding-left: 0; }
-      .form-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; } /* Mobile Menu hier vereinfacht ausgeblendet */
+      .nav-links { display: none; }
     }
   </style>
 </head>
@@ -311,7 +265,7 @@
     <div class="nav">
       <div class="nav-logo" onclick="showPage('start')">
         <div class="nav-logo-pill">F</div>
-        <span>Fabian • Tech Portfolio</span>
+        <span>Fabian – Tech Portfolio</span>
       </div>
       <nav class="nav-links">
         <a data-page="start" class="active">Start</a>
@@ -333,8 +287,8 @@
             <span class="text-gradient">Hardware Experte.</span>
           </h1>
           <p class="hero-text">
-            Auf dieser Seite sammle ich mein Wissen rund um Computer. 
-            Während ich mich in der <strong>Web-Entwicklung und im Coden gerade neu einarbeite</strong>, 
+            Auf dieser Seite sammle ich mein Wissen rund um Computer.
+            Während ich mich in der <strong>Web-Entwicklung und im Coden gerade neu einarbeite</strong>,
             kenne ich mich mit <strong>PC-Hardware und Technik bereits bestens aus</strong>.
             Hier zeige ich meinen Lernfortschritt und mein Setup.
           </p>
@@ -352,17 +306,17 @@
       <h2 class="section-heading">Was diese Seite zeigt</h2>
       <div class="grid">
         <div class="card" onclick="showPage('start')" style="cursor: pointer;">
-          <div class="card-meta">01 • Einstieg</div>
+          <div class="card-meta">01 – Einstieg</div>
           <h3 class="card-title">Schneller Überblick</h3>
           <p class="card-text">Die Startseite fasst kurz zusammen, wer ich bin und womit ich mich aktuell beschäftige.</p>
         </div>
         <div class="card" onclick="showPage('pc')" style="cursor: pointer;">
-          <div class="card-meta">02 • Technik</div>
+          <div class="card-meta">02 – Technik</div>
           <h3 class="card-title">Hardware transparent</h3>
           <p class="card-text">Detaillierte Einsicht in meinen Lian Li Build mit i7 und RTX 4070 Ti und warum ich diese Teile gewählt habe.</p>
         </div>
         <div class="card" onclick="showPage('skills')" style="cursor: pointer;">
-          <div class="card-meta">03 • Entwicklung</div>
+          <div class="card-meta">03 – Entwicklung</div>
           <h3 class="card-title">Schritt für Schritt</h3>
           <p class="card-text">Unter „Skills“ dokumentiere ich, was ich schon sicher beherrsche und wo ich noch lerne (wie HTML/CSS).</p>
         </div>
@@ -382,15 +336,12 @@
             Mit dieser Seite halte ich fest, was ich bereits kann, und zeige, in welche Richtung ich mich beruflich entwickeln möchte.
           </p>
         </div>
-        <div class="image-frame">
-          <img src="images/3.jpg" alt="Mein Setup" style="width: 100%; display: block; border-radius: 16px;">
-        </div>
       </div>
 
       <h2 class="section-heading" style="margin-top:3rem;">Kontakt</h2>
       <div class="card" style="margin-top: 1rem; display: inline-block;">
         <h3 class="card-title">Direkter Kontakt</h3>
-        <p class="card-text">Schreib mir einfach eine E-Mail, das Formular entfällt:</p>
+        <p class="card-text">Schreib mir einfach eine E-Mail:</p>
         <a class="btn btn-primary" href="mailto:info@fabianpflueger.ch">info@fabianpflueger.ch</a>
       </div>
     </section>
@@ -431,7 +382,7 @@
         <div class="card">
           <div class="card-meta">Leistung</div>
           <h3 class="card-title">Specs bewerten</h3>
-          <p class="card-text">Taktraten, VRAM und Benchmarks kann ich einordnen um die richtige Hardware zu finden.</p>
+          <p class="card-text">Taktraten, VRAM und Benchmarks kann ich einordnen, um die richtige Hardware zu finden.</p>
         </div>
         <div class="card">
           <div class="card-meta">Troubleshooting</div>
@@ -443,14 +394,10 @@
 
     <section id="page-pc" class="page">
       <h1 class="page-title hero-title">Meine PC-Konfiguration</h1>
-      <p class="section-subtext">
-        Diese Zusammenstellung basiert auf der Konfigurationsnummer <strong>2619750</strong>
-        und ist auf flüssiges Gaming und vielseitige Nutzung ausgelegt.
-      </p>
 
       <div class="hero" style="margin-bottom: 3rem;">
         <div class="image-frame">
-          <img src="images/3.jpg" alt="Mein Setup" style="width: 100%; display: block; border-radius: 16px;">
+          <img src="images/2.jpg" alt="Mein Setup" style="width: 100%; display: block; border-radius: 16px;">
         </div>
         <div>
           <div class="hero-tag">Gaming & Alltag</div>
@@ -479,135 +426,6 @@
           <strong>Garantie:</strong> 2 Jahre
         </p>
       </div>
-
-      <h2 class="section-heading">Komponenten im Detail</h2>
-      <div class="grid">
-        <div class="card">
-          <div class="spec-badge">Prozessor</div>
-          <h3 class="card-title">Intel Core i7-14700KF</h3>
-          <p class="card-text">Der Prozessor bietet eine Kombination aus leistungsstarken und effizienten Kernen und erreicht im Turbo bis zu 5.60 GHz.</p>
-          <ul class="spec-list">
-            <li><strong>Aufgabe:</strong> Steuert die Berechnungen des Systems.</li>
-            <li><strong>Stärken:</strong> Hohe Mehrkernleistung & starke Einzelkernleistung für Spiele.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="spec-badge">Kühlung</div>
-          <h3 class="card-title">Endorfy Navis F360 ARGB</h3>
-          <p class="card-text">Eine 360-Millimeter-Wasserkühlung mit beleuchteten Lüftern.</p>
-          <ul class="spec-list">
-            <li><strong>Aufgabe:</strong> Hält die CPU kühl.</li>
-            <li><strong>Vorteil:</strong> Große Kühlfläche, leiser als kompakte Lösungen.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="spec-badge">Mainboard</div>
-          <h3 class="card-title">MSI PRO Z790-P WIFI DDR5</h3>
-          <p class="card-text">Ein ATX-Board mit Unterstützung für DDR5-Speicher und integriertem WLAN.</p>
-          <ul class="spec-list">
-            <li><strong>Aufgabe:</strong> Verbindet alle Komponenten.</li>
-            <li><strong>Ausstattung:</strong> Moderne Schnittstellen für schnelle Laufwerke.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="spec-badge">Arbeitsspeicher</div>
-          <h3 class="card-title">32 GB DDR5-6000 Kingston Fury</h3>
-          <p class="card-text">Zwei 16-GB-Module mit aktuellem DDR5-Standard und 6000 MHz Takt.</p>
-          <ul class="spec-list">
-            <li><strong>Aufgabe:</strong> Hält Daten für den Moment bereit.</li>
-            <li><strong>Nutzen:</strong> Entspanntes Multitasking und Reserven.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="spec-badge">Massenspeicher</div>
-          <h3 class="card-title">2 TB Kingston Fury Renegade</h3>
-          <p class="card-text">Eine M.2-SSD mit PCIe-4.0-Anbindung und sehr hoher Datenrate.</p>
-          <ul class="spec-list">
-            <li><strong>Aufgabe:</strong> Speichert Windows, Programme und Spiele.</li>
-            <li><strong>Vorteil:</strong> Extrem kurze Ladezeiten.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="spec-badge">Grafikkarte</div>
-          <h3 class="card-title">NVIDIA GeForce RTX 4070 Ti</h3>
-          <p class="card-text">Eine leistungsstarke Gaming-Grafikkarte mit 12 GB Videospeicher.</p>
-          <ul class="spec-list">
-            <li><strong>Aufgabe:</strong> Berechnet Bilder, Effekte und 3D-Szenen.</li>
-            <li><strong>Nutzen:</strong> Hohe Bildraten und Raytracing.</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="spec-badge">Netzteil</div>
-          <h3 class="card-title">850 W Gigabyte GP-UD850GM</h3>
-          <p class="card-text">Ein vollmodulares Netzteil mit 850 W Leistung und 80+ Gold Effizienz.</p>
-          <ul class="spec-list">
-            <li><strong>Aufgabe:</strong> Stabile Stromversorgung.</li>
-            <li><strong>Vorteil:</strong> Nur benötigte Kabel werden genutzt (Modular).</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="spec-badge">Gehäuse</div>
-          <h3 class="card-title">Lian Li LANCOOL II MESH RGB</h3>
-          <p class="card-text">Ein Gehäuse mit Glas-Seitenteil und luftdurchlässiger Front.</p>
-          <ul class="spec-list">
-            <li><strong>Aufgabe:</strong> Schutz und Airflow.</li>
-            <li><strong>Eindruck:</strong> Modern und übersichtlich dank RGB & Glas.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="page-faq" class="page">
-      <h1 class="page-title hero-title">FAQ – Häufige Fragen</h1>
-      <p class="section-subtext">Einige typische Fragen, die zu dieser Konfiguration oder allgemein zu Hardware auftauchen könnten.</p>
-
-      <div style="max-width: 800px;">
-        <div class="faq-item">
-          <div class="faq-question">Warum hast du genau diese CPU gewählt? <span>▼</span></div>
-          <div class="faq-answer">
-            Die CPU kombiniert viele Kerne mit hohem Takt und bietet damit eine
-            gute Mischung aus Mehrkernleistung und starker Einzelkernperformance.
-            Das ist sowohl für Spiele als auch für andere Anwendungen sinnvoll.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Reicht die RTX 4070 Ti für aktuelle Spiele? <span>▼</span></div>
-          <div class="faq-answer">
-            Für gängige Auflösungen wie 1080p und 1440p ist die Karte sehr gut
-            geeignet. Mit passenden Einstellungen sind auch höhere Auflösungen möglich,
-            besonders wenn Funktionen wie DLSS genutzt werden.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Weshalb sind 32 GB Arbeitsspeicher verbaut? <span>▼</span></div>
-          <div class="faq-answer">
-            32 GB sorgen dafür, dass genügend Reserve für mehrere Programme
-            parallel, viele Browser-Tabs und kommende Spiele vorhanden ist. So
-            bleibt das System länger flexibel nutzbar.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Warum setzt du auf eine große NVMe-SSD? <span>▼</span></div>
-          <div class="faq-answer">
-            Eine schnelle NVMe-SSD macht den Alltag deutlich angenehmer: kurze
-            Startzeiten, schnelle Installationen und kaum Wartezeiten beim Laden
-            von Spielen oder Projekten. Mit 2 TB ist genügend Platz
-            vorhanden, ohne direkt erweitern zu müssen.
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">Wird die Grafikkarte direkt eingebaut geliefert? <span>▼</span></div>
-          <div class="faq-answer">
-            Aus Transportsicherheitsgründen wird die Grafikkarte häufig separat verpackt.
-            So wird das Mainboard im Gehäuse geschont. Nach dem Aufbau wird die
-            Karte eingesetzt und mit den passenden Stromkabeln verbunden.
-          </div>
-        </div>
-      </div>
     </section>
 
     <footer>
@@ -616,62 +434,31 @@
   </main>
 
   <script>
-    // Jahr automatisch
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Seiten-Navigation
     const navLinks = document.querySelectorAll('.nav-links a');
     const pages = document.querySelectorAll('.page');
 
     function showPage(pageId) {
-      // Alle Seiten verstecken
       pages.forEach(p => p.classList.remove('active'));
-      // Richtige Seite zeigen
       const target = document.getElementById('page-' + pageId);
-      if(target) target.classList.add('active');
-      
-      // Nav Link aktiv setzen
+      if (target) target.classList.add('active');
+
       navLinks.forEach(link => {
         link.classList.toggle('active', link.dataset.page === pageId);
       });
-      // Nach oben scrollen
+
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    // Klick-Events für Navigation
     navLinks.forEach(link => {
       link.addEventListener('click', () => showPage(link.dataset.page));
     });
 
-    // Klick-Events für Buttons innerhalb der Seiten
     document.querySelectorAll('[data-page-link]').forEach(btn => {
       btn.addEventListener('click', () => showPage(btn.dataset.pageLink));
     });
-
-    // FAQ auf/zuklappen
-    document.querySelectorAll('.faq-item').forEach(item => {
-      item.addEventListener('click', () => {
-        const isOpen = item.classList.contains('open');
-        // Erstmal alle schließen (optional, wenn man nur eins offen haben will)
-        // document.querySelectorAll('.faq-item').forEach(i => {
-        //   i.classList.remove('open');
-        //   i.querySelector('.faq-answer').style.display = 'none';
-        // });
-
-        if(!isOpen) {
-          item.classList.add('open');
-          item.querySelector('.faq-answer').style.display = 'block';
-        } else {
-          item.classList.remove('open');
-          item.querySelector('.faq-answer').style.display = 'none';
-        }
-      });
-    });
   </script>
 </body>
-<<<<<<< HEAD
-</html>
-=======
 </html>
 
->>>>>>> 0fd2cb8b8be39527ec95910d9ccdce407eed723b
